@@ -1,0 +1,42 @@
+@use "sass:math";
+
+:root {
+    --el-color-primary: #07C160;
+    --el-color-error: red;
+    --el-border-color-base: #d0d0d0;
+}
+
+// level1
+$main_color:#07C160;
+
+$color_primary_black:#565e72;
+$color_primary_green:#FFAA00;
+
+$color_active: #f0f8ff;
+
+
+//fonts
+$font_size_12: 12px;
+$font_size_14: 14px;
+$font_size_16: 16px;
+$font_size_18: 18px;
+$font_size_24: 24px;
+// border
+$border: 1px solid #d0d0d0;
+$border_normal: 1px solid $color_primary_black;
+$border_error: 1px solid $color_primary_black;
+
+$shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+
+$border_radius_normal: 4px;
+$border_radius_dialog: 16px;
+
+// 块元素内边距
+$block_min_padding: 8px;
+$block_padding: 12px;
+$block_normal_padding: 16px;
+$block_max_padding: 32px;
+
+// 块元素外边距
+$block_min_margin: 8px;
+$block_max_margin: 16px;

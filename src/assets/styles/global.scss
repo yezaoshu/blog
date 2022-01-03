@@ -1,0 +1,143 @@
+@import './define.scss';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: $font_size_12;
+  font-family: PingFang SC, PingFang SC-Light;
+  ::selection {
+    color: white;
+    background: rgb(255, 43, 209);
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+}
+// 全局属性
+
+label {
+  font-weight: 700;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+// 自定义样式
+// 字体大小
+@each $size in 12, 14, 16, 18, 20, 24, 32, 100 {
+  .fs-#{$size} {
+    font-size: $size + px;
+  }
+}
+
+.fb{
+  font-weight: 700;
+}
+.pointer{
+  cursor: pointer;
+}
+
+.color-main{
+  color: $main_color;
+}
+
+.pd-min {
+  padding: 8px;
+}
+.pd-max {
+  padding: 16px;
+}
+.mg-min {
+  margin: 16px;
+}
+.mg-max {
+  margin: 32px;
+}
+
+.br-min {
+  border-radius: $border_radius_normal;
+}
+
+@mixin flex-box($d: row, $j: flex-start, $a: center, $w: nowrap) {
+  display: flex;
+  flex: {
+    direction: $d;
+    wrap: $w;
+  }
+  justify-content: $j;
+  align-items: $a;
+}
+
+.flex-box-r{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.flex-box-c{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-nogrow {
+  flex-grow: 0;
+}
+
+
+// 滚动条
+/*修改滚动条样式*/
+div::-webkit-scrollbar{
+  width:10px;
+  border-left: 2px solid black;
+  height:100%;
+  /**/
+}
+div::-webkit-scrollbar-track{
+  // background: #bfbfbf;
+  // border-radius:2px;
+}
+div::-webkit-scrollbar-thumb{
+  background: rgb(217, 217, 255);
+  border-left: 2px solid black;
+
+  // border-radius:10px;
+}
+// div::-webkit-scrollbar-thumb:hover{
+//   background: #333;
+// }
+div::-webkit-scrollbar-corner{
+  // background: #179a16;
+}
